@@ -28,6 +28,7 @@ function genAddNew() {
 
               <br>
 
+          <div class='addRate'>
             <label for='new item rating'>Rating:
               <select aria-label='new bookmark rating' name='rating' id='newRating' class='newRating-select' default='1' required>
                 <option value='1'>1</option>
@@ -37,12 +38,11 @@ function genAddNew() {
                 <option value='5'>5</option>
               </select>
             </label>
-
-            <br>
             
           <label for='submit'>  
             <button aria-label='submit new bookmark' type='submit' class='add'>Add</button>
           </label>
+        </div>
           </fieldset>
         </form>
       </section>`;
