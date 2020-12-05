@@ -4,6 +4,32 @@ import api from './api';
 
 //HTML Generators
 
+function generateMain(){
+  $('main').html(`<h1>My Bookmarks</h1>
+
+    <section class='controls'>
+        <button aria-label='add new bookmark'class='new' name='new bookmark'>New +</button>
+        
+        <select aria-label='filter results' class='filter' id='filter' name='filter'>
+          <option name='filter options'>Filter</option>
+          <option name='1 star' value='1'>1+</option>
+          <option name='2 stars' value='2'>2+</option>
+          <option name='3 stars' value='3'>3+</option>
+          <option name='4 stars' value='4'>4+</option>
+          <option name='5 stars' value='5'>5</option>
+        </label>
+        </select>
+    </section>
+
+    <section class='errPopUp'>
+
+    </section>
+
+    <section class='bookmarkListHTML'>
+      
+    </section>`);
+}
+
 function genAddNew() {
   return `<section class='create'>
         <form aria-label='new bookmark form' name='new bookmark form' class='newBookmark' id='newBookmark'>
@@ -245,6 +271,7 @@ function bindEventListeners() {
 }
 
 export default {
+  generateMain,
   bindEventListeners,
   render
 };
